@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+        <ProjectGuid>{3D0702C8-22EB-4220-8566-EB58C5AC7003}</ProjectGuid>
+        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>uberdriver</RootNamespace>
+        <AssemblyName>uberdriver</AssemblyName>
+        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>x86_64</MtouchArch>
+        <MtouchLink>None</MtouchLink>
+        <MtouchDebug>true</MtouchDebug>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>x86_64</MtouchArch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhone\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhone\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+      <PackageReference Include="Xamarin.Firebase.iOS.Auth">
+        <Version>6.2.1.1</Version>
+      </PackageReference>
+      <PackageReference Include="Xamarin.Firebase.iOS.Database">
+        <Version>6.0.0</Version>
+      </PackageReference>
+      <PackageReference Include="Xamarin.Google.iOS.Maps">
+        <Version>3.1.0</Version>
+      </PackageReference>
+      <PackageReference Include="System.Net.Http">
+        <Version>4.3.4</Version>
+      </PackageReference>
+      <PackageReference Include="Newtonsoft.Json">
+        <Version>12.0.3</Version>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\colorprimary.colorset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\coloraccent.colorset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\home.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\home.imageset\home.png" />
+        <ImageAsset Include="Assets.xcassets\home.imageset\home1.png" />
+        <ImageAsset Include="Assets.xcassets\home.imageset\home2.png" />
+        <ImageAsset Include="Assets.xcassets\earnings.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\earnings.imageset\card.png" />
+        <ImageAsset Include="Assets.xcassets\earnings.imageset\card1.png" />
+        <ImageAsset Include="Assets.xcassets\earnings.imageset\card2.png" />
+        <ImageAsset Include="Assets.xcassets\ratings.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\ratings.imageset\star.png" />
+        <ImageAsset Include="Assets.xcassets\ratings.imageset\star1.png" />
+        <ImageAsset Include="Assets.xcassets\ratings.imageset\star2.png" />
+        <ImageAsset Include="Assets.xcassets\account.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\account.imageset\person.png" />
+        <ImageAsset Include="Assets.xcassets\account.imageset\person1.png" />
+        <ImageAsset Include="Assets.xcassets\account.imageset\person2.png" />
+        <ImageAsset Include="Assets.xcassets\arrowback.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\arrowback.imageset\icons8-left-50.png" />
+        <ImageAsset Include="Assets.xcassets\arrowback.imageset\icons8-left-100.png" />
+        <ImageAsset Include="Assets.xcassets\arrowback.imageset\icons8-left-150.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\" />
+        <Folder Include="Assets.xcassets\colorprimary.colorset\" />
+        <Folder Include="Assets.xcassets\coloraccent.colorset\" />
+        <Folder Include="Assets.xcassets\home.imageset\" />
+        <Folder Include="Assets.xcassets\earnings.imageset\" />
+        <Folder Include="Assets.xcassets\ratings.imageset\" />
+        <Folder Include="Assets.xcassets\account.imageset\" />
+        <Folder Include="ViewControllers\" />
+        <Folder Include="EventListeners\" />
+        <Folder Include="Helpers\" />
+        <Folder Include="Datamodels\" />
+        <Folder Include="Sounds\" />
+        <Folder Include="Assets.xcassets\arrowback.imageset\" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterfaceDefinition Include="LaunchScreen.storyboard" />
+        <InterfaceDefinition Include="Main.storyboard" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Main.cs" />
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="SceneDelegate.cs" />
+        <Compile Include="ViewControllers\AccountViewController.cs" />
+        <Compile Include="ViewControllers\AccountViewController.designer.cs">
+          <DependentUpon>AccountViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\EarningsviewController.cs" />
+        <Compile Include="ViewControllers\EarningsviewController.designer.cs">
+          <DependentUpon>EarningsviewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\HomeViewController.cs" />
+        <Compile Include="ViewControllers\HomeViewController.designer.cs">
+          <DependentUpon>HomeViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\LoginViewController.cs" />
+        <Compile Include="ViewControllers\LoginViewController.designer.cs">
+          <DependentUpon>LoginViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\MainTabController.cs" />
+        <Compile Include="ViewControllers\MainTabController.designer.cs">
+          <DependentUpon>MainTabController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\RatingsViewController.cs" />
+        <Compile Include="ViewControllers\RatingsViewController.designer.cs">
+          <DependentUpon>RatingsViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\RegisterViewController.cs" />
+        <Compile Include="ViewControllers\RegisterViewController.designer.cs">
+          <DependentUpon>RegisterViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="EventListeners\AvailabilityListener.cs" />
+        <Compile Include="Helpers\AppDataHelper.cs" />
+        <Compile Include="Datamodels\RideDetails.cs" />
+        <Compile Include="EventListeners\NewTripEventListener.cs" />
+        <Compile Include="Helpers\MapFunctionHelper.cs" />
+        <Compile Include="Helpers\DirectionParser.cs" />
+        <Compile Include="TripCell.cs" />
+        <Compile Include="TripCell.designer.cs">
+          <DependentUpon>TripCell.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Datamodels\RideHistory.cs" />
+        <Compile Include="ViewControllers\TripsViewController.cs" />
+        <Compile Include="ViewControllers\TripsViewController.designer.cs">
+          <DependentUpon>TripsViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ViewControllers\TripDataSource.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="Resources\centerimage.png" />
+      <BundleResource Include="GoogleService-Info.plist" />
+      <BundleResource Include="Resources\cover.png" />
+      <BundleResource Include="Resources\dark_marker.png" />
+      <BundleResource Include="Sounds\alert.mp3" />
+      <BundleResource Include="Resources\alertios.aiff" />
+      <BundleResource Include="Resources\call.png" />
+      <BundleResource Include="Resources\cancel_blue.png" />
+      <BundleResource Include="Resources\posimarker.png" />
+      <BundleResource Include="Resources\taxi_ash.png" />
+      <BundleResource Include="Resources\greenball.png" />
+      <BundleResource Include="Resources\redball.png" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
